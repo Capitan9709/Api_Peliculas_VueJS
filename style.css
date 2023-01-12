@@ -1,0 +1,85 @@
+body{
+    margin: 0;
+    font-family: sans-serif;
+    background-color: #3D5467;
+    text-align: center;
+}
+h1{
+    background-color: #8AA29E;
+    padding: 5px;
+    margin : 0 auto;
+    text-align: center;
+}
+input{
+    width: 200px;
+    padding: 3px;
+    border-radius: 5px;
+    background-color: #8AA29E;
+}
+button{
+    margin-top: 10px;
+    padding: 3px;
+    border-radius: 5px;
+    background-color: #8AA29E;
+}
+button:hover{
+    background-color: #627270;
+}
+#contenedor{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    row-gap: 30px;
+    column-gap: 30px;
+    margin-bottom: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+#contenedor>div{
+    text-align: center;
+    background-color: #8AA29E;
+    border-radius: 10px;
+    box-shadow: 3px 5px 7px black;
+    transition: 1s;
+    padding: 5px;
+}
+#peliculas{
+    display: block;
+    width: 75%;
+    margin: 0 auto;
+
+    text-align: center;
+    background-color: #8AA29E;
+    border-radius: 10px;
+    box-shadow: 3px 5px 7px black;
+    padding: 5px;
+    margin: 0 auto;
+    margin-top: 40px;
+    margin-bottom: 40px;
+
+}
+#peliculas h5{
+    margin-bottom: 0px;
+}
+#botonInfo{
+    float: right;
+}
+#informacion{
+    position: fixed;
+    z-index: 10;
+
+    text-align: left;
+    width: 40em;
+    background-color: #738985;
+    border-radius: 10px;
+    box-shadow: 3px 5px 7px black;
+    padding: 5px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+#informacion h3{
+    margin-left: 10px;
+}

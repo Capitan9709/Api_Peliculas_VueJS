@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+    <title>Web Pelis Online</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body id="app">
+    <h1>Buscador de Peliculas</h1><br>
+    <input type="text" id="titulo-input" placeholder="Escribe algo" @keyup.enter="submit" v-model="input"><br>
+    <button @click="submit">Buscar</button>
+    <br><br>
+    <div v-show="mostrarDetalles" id="informacion">
+        <button @click="cerrarInformacion" id="botonInfo">Cerrar</button>
+        <h3>-Titulo: {{detalles.Title}}</h3>
+        <h3>-Actores: {{detalles.Actors}}</h3>
+        <h3>-Director: {{detalles.Director}}</h3>
+        <h3>-Genero: {{detalles.Genre}}</h3>
+        <h3>-Idioma: {{detalles.Language}}</h3>
+        <h3>-Pais: {{detalles.Country}}</h3>
+        <h3>-Resumen: {{detalles.Plot}}</h3>
+    </div>
+    <div id="contenedor">
+        <div v-for="pelicula in peliculas" :key="pelicula.imdbID">
+            <h2>{{pelicula.Title}}</h2>
+            <img :src="pelicula.Poster">
+            <h3>Año de publicacion: {{pelicula.Year}}</h3>
+            <button id="masInfo" @click="masInformacion(pelicula.imdbID)">Mas Informacion</button>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
